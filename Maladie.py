@@ -1,3 +1,5 @@
+from Hopital import Hopital
+
 class Maladie:
     """
     classe Maladie

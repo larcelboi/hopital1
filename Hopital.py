@@ -1,3 +1,6 @@
+from Patient import Patient
+from Maladie import Maladie
+
 class Hopital:
     """
     classes Hopital
@@ -30,3 +33,13 @@ class Hopital:
     @type_soins_offert.setter
     def type_soins_offert(self, type_soins_offer):
         self._type_soins_offert = type_soins_offer
+
+
+def verifier_besoins(self, patient: Patient):
+    """
+    Vérifier  les besoins du patient en verifiant la maladie est ressortant le soin necessaire.
+    :param self: Hospital
+    :param patient: Patient donner
+    :return: soins necessaire
+    """
+    maladie_p : list = patient.maladies

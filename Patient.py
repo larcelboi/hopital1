@@ -1,4 +1,3 @@
-from Hopital import Hopital
 from Maladie import Maladie
 
 class Patient:
@@ -34,7 +33,10 @@ class Patient:
 
     @age.setter
     def age(self, age):
-        self._age = age
+        if age > 0 or age < 100:
+            self._age = age
+        else:
+            raise ValueError("âge non valide")
 
     @property
     def carte_AM(self):
@@ -42,7 +44,10 @@ class Patient:
 
     @carte_AM.setter
     def carte_AM(self, carte_AM):
-        self._carte_AM = carte_AM
+        if len(carte_AM) == 12:
+            self._carte_AM = carte_AM
+        else:
+            raise ValueError("carte_AM doit être 12 caractères de long")
 
     @property
     def maladies(self):
