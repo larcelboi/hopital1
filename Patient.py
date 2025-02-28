@@ -55,4 +55,5 @@ class Patient:
 
     @maladies.setter
     def maladies(self, maladies):
+        # verifier maladie
         self._maladies = maladies
