@@ -8,7 +8,7 @@ class Hopital:
     def __init__(self, nom : str, adresse : str, patient : list[Patient], type_soins_offert : list):
         self.nom = nom
         self.adresse = adresse
-        self.patient = patient
+        self.patient_h = patient
         self.type = type_soins_offert
 
     @property
@@ -29,11 +29,11 @@ class Hopital:
 
     @property
     def patient(self):
-        return self._patient
+        return self._patient_h
 
     @patient.setter
     def patient(self, patient):
-        self._patient = patient
+        self._patient_h = patient
 
     @property
     def type_soins_offert(self):
@@ -47,13 +47,8 @@ class Hopital:
 
 def verifier_besoins(self, patient: Patient):
     """
-    Vérifier  les besoins du patient et l'envoyer à l'hopital approprié.
+    Vérifier  les besoins du patient (et âge) et l'envoyer à l'hopital approprié.
     :param self: Hospital
     :param patient: Patient donner
-    :return: soins necessaire
     """
-    maladie_p : list = patient.maladies
-    age_p : int = patient.age
-
-
-
+    pass
